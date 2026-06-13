@@ -12,17 +12,22 @@
     return typeof link === "string" && link.startsWith("https://buy.stripe.com/");
   }
 
+  function pad2(n) {
+    return String(n).padStart(2, "0");
+  }
+
   function renderProducts() {
     const grid = document.getElementById("product-grid");
     if (!grid || typeof CHIGENTS_PRODUCTS === "undefined") return;
 
-    CHIGENTS_PRODUCTS.forEach(function (p) {
+    CHIGENTS_PRODUCTS.forEach(function (p, i) {
       const t = p[lang];
       const price = lang === "en" ? p.priceEn : p.price;
       const period = lang === "en" ? p.periodEn : p.period;
 
       const card = document.createElement("article");
-      card.className = "product-card" + (p.featured ? " featured" : "");
+      card.className = "product-card reveal" + (p.featured ? " featured" : "");
+      card.style.transitionDelay = (i * 0.08) + "s";
 
       if (t.badge) {
         const badge = document.createElement("span");
@@ -31,10 +36,17 @@
         card.appendChild(badge);
       }
 
-      const emoji = document.createElement("div");
-      emoji.className = "product-emoji";
-      emoji.textContent = p.emoji;
-      card.appendChild(emoji);
+      const top = document.createElement("div");
+      top.className = "product-top";
+      const tag = document.createElement("span");
+      tag.className = "product-tag";
+      tag.textContent = t.tag || "";
+      const idx = document.createElement("span");
+      idx.className = "product-index";
+      idx.textContent = pad2(i + 1);
+      top.appendChild(tag);
+      top.appendChild(idx);
+      card.appendChild(top);
 
       const name = document.createElement("h3");
       name.textContent = t.name;
@@ -75,6 +87,30 @@
     });
   }
 
+  /* Dezentes Einblenden beim Scrollen */
+  function setupReveal() {
+    const targets = document.querySelectorAll(
+      ".section-head, .card, .product-card, .hero .eyebrow, .hero h1, .hero .tagline, .hero-cta, .hero-dog, .faq-list details"
+    );
+    targets.forEach(function (el) { el.classList.add("reveal"); });
+
+    if (!("IntersectionObserver" in window)) {
+      targets.forEach(function (el) { el.classList.add("in"); });
+      return;
+    }
+
+    const observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("in");
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: "0px 0px -8% 0px" });
+
+    targets.forEach(function (el) { observer.observe(el); });
+  }
+
   function setYear() {
     const el = document.getElementById("year");
     if (el) el.textContent = new Date().getFullYear();
@@ -82,6 +118,7 @@
 
   document.addEventListener("DOMContentLoaded", function () {
     renderProducts();
+    setupReveal();
     setYear();
   });
 })();
