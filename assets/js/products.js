@@ -24,7 +24,6 @@
 const CHIGENTS_PRODUCTS = [
   {
     id: "ebook-guide",
-    emoji: "📘",
     price: "14,99 €",
     priceEn: "$16.99",
     period: null,
@@ -32,13 +31,15 @@ const CHIGENTS_PRODUCTS = [
     featured: true,
     stripeLink: "PASTE_YOUR_STRIPE_PAYMENT_LINK_HERE",
     de: {
-      name: "Der Chihuahua-Guide für Männer (E-Book)",
+      tag: "E-Book",
+      name: "Der Chihuahua-Guide für Männer",
       desc: "Das komplette Handbuch: Auswahl, Erziehung, Ernährung und Alltag mit deinem Chihuahua – direkt, praxisnah und ohne Geschwafel. Sofort-Download als PDF.",
       badge: "Bestseller",
       cta: "Jetzt kaufen",
     },
     en: {
-      name: "The Chihuahua Guide for Men (eBook)",
+      tag: "eBook",
+      name: "The Chihuahua Guide for Men",
       desc: "The complete handbook: choosing, training, feeding and everyday life with your Chihuahua – straight to the point, no fluff. Instant PDF download.",
       badge: "Bestseller",
       cta: "Buy now",
@@ -46,7 +47,6 @@ const CHIGENTS_PRODUCTS = [
   },
   {
     id: "club-membership",
-    emoji: "⭐",
     price: "6,99 €",
     priceEn: "$7.99",
     period: "/ Monat",
@@ -54,13 +54,15 @@ const CHIGENTS_PRODUCTS = [
     featured: false,
     stripeLink: "PASTE_YOUR_STRIPE_PAYMENT_LINK_HERE",
     de: {
-      name: "ChiGents Club – Mitgliedschaft",
+      tag: "Mitgliedschaft",
+      name: "ChiGents Club",
       desc: "Exklusiver Mitgliederbereich: monatlicher Trainings-Newsletter, Futter- und Zubehör-Tests, Community-Zugang und Rabatte auf alle Produkte. Monatlich kündbar.",
       badge: null,
       cta: "Mitglied werden",
     },
     en: {
-      name: "ChiGents Club – Membership",
+      tag: "Membership",
+      name: "ChiGents Club",
       desc: "Exclusive members area: monthly training newsletter, food & gear reviews, community access and discounts on all products. Cancel anytime.",
       badge: null,
       cta: "Join the club",
@@ -68,7 +70,6 @@ const CHIGENTS_PRODUCTS = [
   },
   {
     id: "merch-shirt",
-    emoji: "👕",
     price: "29,99 €",
     priceEn: "$32.99",
     period: null,
@@ -76,13 +77,15 @@ const CHIGENTS_PRODUCTS = [
     featured: false,
     stripeLink: "PASTE_YOUR_STRIPE_PAYMENT_LINK_HERE",
     de: {
-      name: "ChiGents T-Shirt „Big Dog Energy“",
+      tag: "Kollektion",
+      name: "T-Shirt „Big Dog Energy“",
       desc: "Premium-Shirt mit Chihuahua-Motiv für echte Kerle. Produktion und Versand laufen automatisch über Print-on-Demand – du musst nichts lagern.",
       badge: null,
       cta: "Shirt holen",
     },
     en: {
-      name: "ChiGents Tee “Big Dog Energy”",
+      tag: "Collection",
+      name: "Tee “Big Dog Energy”",
       desc: "Premium tee with a Chihuahua design for real guys. Produced and shipped automatically via print-on-demand – zero inventory.",
       badge: null,
       cta: "Get the tee",
@@ -90,7 +93,6 @@ const CHIGENTS_PRODUCTS = [
   },
   {
     id: "training-plan",
-    emoji: "🏋️",
     price: "9,99 €",
     priceEn: "$10.99",
     period: null,
@@ -98,13 +100,15 @@ const CHIGENTS_PRODUCTS = [
     featured: false,
     stripeLink: "PASTE_YOUR_STRIPE_PAYMENT_LINK_HERE",
     de: {
-      name: "30-Tage-Trainingsplan (PDF)",
+      tag: "Programm",
+      name: "30-Tage-Trainingsplan",
       desc: "Schritt-für-Schritt-Plan: In 30 Tagen vom chaotischen Welpen zum souveränen Begleiter. Tägliche 10-Minuten-Einheiten, sofort als PDF.",
       badge: null,
       cta: "Plan sichern",
     },
     en: {
-      name: "30-Day Training Plan (PDF)",
+      tag: "Program",
+      name: "30-Day Training Plan",
       desc: "Step-by-step plan: from chaotic puppy to confident companion in 30 days. Daily 10-minute sessions, instant PDF download.",
       badge: null,
       cta: "Get the plan",

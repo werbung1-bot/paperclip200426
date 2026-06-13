@@ -15,10 +15,14 @@
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' fill='none' stroke='%23c8a565' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M15 27 L3 9 L26 17'/%3E%3Cpath d='M49 27 L61 9 L38 17'/%3E%3Cpath d='M15 27 C12 40 19 49 32 52 C45 49 52 40 49 27'/%3E%3Cpath d='M26 17 C29 14.5 35 14.5 38 17'/%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,600&family=Inter:wght@300;400;500;600;700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500&display=swap">
   <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body>
+
+  <div class="utility-bar">
+    <span>For men with character</span><span class="sep">·</span><span>Worldwide shipping</span><span class="sep">·</span><span>Est. MMXXVI</span>
+  </div>
 
   <header class="site-header">
     <div class="container">
@@ -32,7 +36,7 @@
           <circle cx="39" cy="31.5" r="2" fill="currentColor" stroke="none"/>
           <path d="M29.4 39.5 L34.6 39.5 L32 43 Z" fill="currentColor" stroke="none"/><path d="M32 43 V45.2 M28.6 46.8 Q32 49 35.4 46.8" stroke-width="1.6"/>
         </svg>
-        <span><span class="brand-chi">Chi</span>Gents</span>
+        <span class="wordmark">ChiGents</span>
       </a>
       <nav class="main-nav">
         <a href="#guides">Guides</a>
@@ -50,20 +54,21 @@
     <section class="hero">
       <div class="container">
         <div>
+          <span class="eyebrow">The brand for men with Chihuahuas</span>
           <h1>Small dog.<br><span class="accent">Big character.</span></h1>
           <p class="tagline">
-            ChiGents is the site for men who own their Chihuahua with pride.
-            Honest guides, zero kitsch – plus a shop with everything you and
-            your little bodyguard actually need.
+            A curated world for men who own their Chihuahua with pride —
+            with a discerning guide and a select collection for you and
+            your companion.
           </p>
           <div class="hero-cta">
-            <a class="btn btn-primary" href="#shop">Visit the shop</a>
-            <a class="btn btn-ghost" href="#guides">Read the guides</a>
+            <a class="btn btn-primary" href="#shop">Explore the collection</a>
+            <a class="btn btn-text" href="#guides">Read the guides</a>
           </div>
         </div>
         <div class="hero-dog">
           <svg viewBox="0 0 96 96" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <circle cx="48" cy="48" r="46" stroke-width="0.75" opacity="0.45"/>
+            <circle class="ring" cx="48" cy="48" r="46" stroke-width="0.75" opacity="0.45"/>
             <circle cx="48" cy="48" r="42.5" stroke-width="0.5" opacity="0.25"/>
             <g transform="translate(16 20)" stroke-width="2.2">
               <path d="M15 27 L3 9 L26 17"/>
@@ -89,17 +94,17 @@
         </div>
         <div class="card-grid">
           <div class="card">
-            <div class="card-icon">🛡️</div>
+            <span class="card-index">01</span>
             <h3>Loyal to the end</h3>
             <p>Few breeds bond as strongly with their human. A Chihuahua isn't an accessory – he's a partner.</p>
           </div>
           <div class="card">
-            <div class="card-icon">🏙️</div>
+            <span class="card-index">02</span>
             <h3>Fits your life</h3>
             <p>City apartment, car, travel, office: a Chihuahua fits into any man's life – without compromising on character.</p>
           </div>
           <div class="card">
-            <div class="card-icon">💪</div>
+            <span class="card-index">03</span>
             <h3>No kitsch, straight talk</h3>
             <p>Our guides are direct and practical – written by men, for men, without pink ribbons.</p>
           </div>
@@ -117,22 +122,22 @@
         </div>
         <div class="card-grid">
           <div class="card">
-            <div class="card-icon">🤔</div>
+            <span class="card-index">01</span>
             <h3>Why Chihuahuas are perfect dogs for men</h3>
             <p>Alert, loyal, low-maintenance and always by your side: 7 reasons why the smallest dog might be the biggest decision of your life.</p>
           </div>
           <div class="card">
-            <div class="card-icon">🎯</div>
+            <span class="card-index">02</span>
             <h3>Training: respect instead of yapping</h3>
             <p>Small dogs need clear leadership just like big ones. How to teach your Chihuahua basic commands and good manners.</p>
           </div>
           <div class="card">
-            <div class="card-icon">🥩</div>
+            <span class="card-index">03</span>
             <h3>Feeding: what really belongs in the bowl</h3>
             <p>Small stomach, high energy needs: the most common feeding mistakes and how to avoid them.</p>
           </div>
           <div class="card">
-            <div class="card-icon">🧠</div>
+            <span class="card-index">04</span>
             <h3>Myth check: “That's not a real dog”</h3>
             <p>Shaky dog? Purse dog? We bust the biggest myths about Chihuahuas – with facts.</p>
           </div>
@@ -144,16 +149,15 @@
     <section class="section" id="shop">
       <div class="container">
         <div class="section-head">
-          <span class="kicker">Shop</span>
-          <h2>Gear for true ChiGents</h2>
-          <p>Digital guides, training plans, club membership and merch. Secure payment via Stripe – fully automated delivery.</p>
+          <span class="kicker">The Collection</span>
+          <h2>Selected. <em>Uncompromising.</em></h2>
+          <p>Digital guides, training plans, club membership and a curated merch line. Secure payment via Stripe, fully automated delivery.</p>
         </div>
         <div class="product-grid" id="product-grid">
           <!-- Product cards are rendered from assets/js/products.js -->
         </div>
         <p class="shop-note" id="club">
-          🔒 Secure payment via Stripe (card, Apple Pay, Google Pay and more). Digital products are delivered instantly after purchase.
-          The club membership can be cancelled monthly.
+          Secure payment via Stripe — card, Apple&nbsp;Pay, Google&nbsp;Pay and more. Digital products are delivered instantly after purchase; the club membership can be cancelled monthly.
         </p>
       </div>
     </section>
@@ -194,13 +198,31 @@
 
   <footer class="site-footer">
     <div class="container">
-      <div>© <span id="year">2026</span> ChiGents · chigents.com</div>
-      <nav class="footer-links">
-        <a href="../impressum.html">Legal notice</a>
-        <a href="../datenschutz.html">Privacy</a>
-        <a href="../widerruf.html">Withdrawal</a>
-        <a href="../" hreflang="de" lang="de">Deutsch</a>
-      </nav>
+      <div class="footer-top">
+        <div class="footer-brand">
+          <svg class="logo" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M15 27 L3 9 L26 17"/>
+            <path d="M49 27 L61 9 L38 17"/>
+            <path d="M15 27 C12 40 19 49 32 52 C45 49 52 40 49 27"/>
+            <path d="M26 17 C29 14.5 35 14.5 38 17"/>
+            <circle cx="25" cy="31.5" r="2" fill="currentColor" stroke="none"/>
+            <circle cx="39" cy="31.5" r="2" fill="currentColor" stroke="none"/>
+            <path d="M29.4 39.5 L34.6 39.5 L32 43 Z" fill="currentColor" stroke="none"/><path d="M32 43 V45.2 M28.6 46.8 Q32 49 35.4 46.8" stroke-width="1.6"/>
+          </svg>
+          <div class="wordmark">ChiGents</div>
+          <p>The brand for men with Chihuahuas. Small dog. Big character.</p>
+        </div>
+        <nav class="footer-links">
+          <a href="../impressum.html">Legal notice</a>
+          <a href="../datenschutz.html">Privacy</a>
+          <a href="../widerruf.html">Withdrawal</a>
+          <a href="../" hreflang="de" lang="de">Deutsch</a>
+        </nav>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span id="year">2026</span> ChiGents · chigents.com</span>
+        <span>Crafted with care</span>
+      </div>
     </div>
   </footer>
 
